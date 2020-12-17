@@ -11,6 +11,7 @@ public class RegexPattern {
         String lastName;
         String email;
         String pattern;
+        String phone;
         do {
             pattern="^[A-Z]{1}[a-z]{2,}$";
             System.out.println("Enter a valid First Name");
@@ -31,6 +32,13 @@ public class RegexPattern {
             email=scanner.next();
 
         }while(!Pattern.matches(pattern,email));
+        System.out.println("Valid");
+        do {
+            pattern="^[0-9]{2}[ ]?[0-9]{10}$";
+            System.out.println("Enter a valid Phone No.");
+            phone=scanner.next();
+
+        }while(!Pattern.matches(pattern,phone));
         System.out.println("Valid");
     }
 }
